@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FocusMate - Productivity Dashboard</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="app">
+    <h1>📌 FocusMate</h1>
+
+    <div class="dashboard">
+
+      <!-- Pomodoro Timer -->
+      <section class="card timer">
+        <h2>Pomodoro Timer</h2>
+        <div id="timer">25:00</div>
+        <button id="start">Start</button>
+        <button id="reset">Reset</button>
+      </section>
+
+      <!-- To-Do Tasks -->
+      <section class="card tasks">
+        <h2>Tasks</h2>
+        <input type="text" id="new-task" placeholder="Add new task..." />
+        <button id="add-task">Add</button>
+        <ul id="task-list"></ul>
+      </section>
+
+      <!-- Session History -->
+      <section class="card history">
+        <h2>Session History</h2>
+        <ul id="session-history"></ul>
+      </section>
+
+      <!-- Stats Panel -->
+      <section class="card stats">
+        <h2>Focus Stats</h2>
+        <canvas id="focusChart"></canvas>
+        <p>Total Minutes Focused: <span id="total-minutes">0</span></p>
+      </section>
+
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+  <!-- Beep sound for timer end -->
+<audio id="beep" src="https://www.soundjay.com/buttons/sounds/beep-07.mp3"></audio>
+</body>
+</html>
